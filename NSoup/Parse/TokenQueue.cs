@@ -493,7 +493,7 @@ namespace NSoup.Parse
             {
                 accum.Append(Consume());
             }
-            return accum.ToString();
+            return accum.ToString().Trim('\'', '"'); //Clear some attribute value with quotes.
         }
 
         public override string ToString()
